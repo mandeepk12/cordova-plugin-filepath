@@ -10,12 +10,12 @@ Original inspiration [from StackOverflow](http://stackoverflow.com/questions/200
 ## Installation
 
 ```bash
-$ cordova plugin add cordova-plugin-filepath
+$ cordova plugin add https://github.com/mandeepk12/cordova-plugin-filepath.git
 ```
 
 ## Supported Platforms
 
-* Android
+- Android
 
 ## Usage
 
@@ -23,21 +23,30 @@ Once installed the plugin defines the `window.FilePath` object. To resolve a
 file path:
 
 ```js
-window.FilePath.resolveNativePath('content://...', successCallback, errorCallback);
+window.FilePath.resolveNativePath(
+  "content://...",
+  successCallback,
+  errorCallback
+);
 ```
 
 ##### successCallback
-Returns the ``file://`` file path.
+
+Returns the `file://` file path.
 
 ##### errorCallback
+
 Returns the following object:
+
 ```js
 { code: <integer>, message: <string> }
 ```
+
 Possible error codes are:
-* ``-1`` - describes an invalid action
-* ``0`` - ``file://`` path could not be resolved
-* ``1`` - the native path links to a cloud file (e.g: from Google Drive app)
+
+- `-1` - describes an invalid action
+- `0` - `file://` path could not be resolved
+- `1` - the native path links to a cloud file (e.g: from Google Drive app)
 
 ## LICENSE
 

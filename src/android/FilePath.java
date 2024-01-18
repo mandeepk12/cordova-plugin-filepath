@@ -67,6 +67,7 @@ public class FilePath extends CordovaPlugin {
             // Android API 33 and higher
                     permissions.add(Manifest.permission.READ_MEDIA_IMAGES);
                     permissions.add(Manifest.permission.READ_MEDIA_VIDEO);
+                    permissions.add(Manifest.permission.READ_MEDIA_AUDIO);
         } else {
             // Android API 32 or lower
             permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
